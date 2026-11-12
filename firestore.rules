@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public can read room catalog; all writes go through firebase-admin on the server.
+    match /rooms/{roomId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Guest bookings contain PII and must NEVER be readable or writable from clients.
+    match /bookings/{bookingId} {
+      allow read, write: if false;
+    }
+
+    // Default deny for everything else.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
