@@ -63,7 +63,7 @@ export function SiteHeader() {
               alt={`${siteConfig.name} logo`}
               fill
               sizes="48px"
-              className="object-contain"
+              className="object-cover"
               priority
             />
           </div>
@@ -166,7 +166,7 @@ export function SiteHeader() {
                       alt={`${siteConfig.name} logo`}
                       fill
                       sizes="56px"
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
                   <div>

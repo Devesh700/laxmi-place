@@ -25,7 +25,7 @@ export function SiteFooter() {
                   alt={`${siteConfig.name} logo`}
                   fill
                   sizes="56px"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               <div>
