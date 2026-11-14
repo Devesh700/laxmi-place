@@ -3,12 +3,12 @@ import type { SiteConfig } from "@/types/site";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const siteConfig: SiteConfig = {
-  // TODO(owner): Confirm official hotel brand name and tagline
   name: "Laxmi Chandra Palace",
   shortName: "LCP",
-  tagline: "Warm Hospitality, Comfortable Stays & In-House Dining",
+  tagline: "Stay Royal... Feel at Home...",
+  logo: "/assets/logo.png",
   description:
-    "TODO(owner): Add a concise 150-character SEO description of Laxmi Chandra Palace, your rooms, and your in-house restaurant.",
+    "Experience royal heritage hospitality in Ayodhya at Laxmi Chandra Palace. Comfortable air-conditioned rooms, delicious in-house dining, and warm service.",
   url: siteUrl,
   currency: "INR",
   // TODO(owner): Update indicative tariff range
@@ -17,21 +17,21 @@ export const siteConfig: SiteConfig = {
   address: {
     // TODO(owner): Replace with exact street address, city, state, PIN code
     streetAddress: "TODO(owner): Street Address / Landmark",
-    locality: "TODO(owner): City",
-    region: "TODO(owner): State",
-    postalCode: "000000",
+    locality: "Ayodhya",
+    region: "Uttar Pradesh",
+    postalCode: "224123",
     countryCode: "IN",
     countryName: "India",
   },
 
   geo: {
-    // TODO(owner): Replace with exact Google Maps latitude & longitude
-    latitude: 26.9124,
-    longitude: 75.7873,
+    // TODO(owner): Replace with exact Google Maps latitude & longitude (Ayodhya)
+    latitude: 26.7922,
+    longitude: 82.1998,
   },
 
   // TODO(owner): Replace with Google Maps share link
-  mapsUrl: "https://maps.google.com/?q=26.9124,75.7873",
+  mapsUrl: "https://maps.google.com/?q=26.7922,82.1998",
 
   // TODO(owner): Replace with real +91 phone numbers and WhatsApp number (digits only for wa.me)
   phonePrimary: "+910000000000",
@@ -212,10 +212,11 @@ export const siteConfig: SiteConfig = {
   ],
 
   nearbyAttractions: [
-    // TODO(owner): Replace with actual nearby landmarks and distances
-    { name: "TODO(owner): City Railway Station", distance: "2.5 km" },
-    { name: "TODO(owner): Main Bus Stand", distance: "1.8 km" },
-    { name: "TODO(owner): Local Market / Temple", distance: "1.0 km" },
+    { name: "Shri Ram Janmabhoomi Mandir", distance: "Short drive" },
+    { name: "Hanuman Garhi", distance: "Nearby" },
+    { name: "Ram Ki Paidi & Saryu Ghat", distance: "Nearby" },
+    { name: "Ayodhya Dham Railway Station", distance: "Convenient access" },
+    { name: "Maharishi Valmiki Airport Ayodhya", distance: "Direct route" },
   ],
 
   heroImage: "/assets/hotel-01.jpeg",

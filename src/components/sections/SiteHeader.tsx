@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Facebook, Instagram, Menu, MessageCircle, Phone } from "lucide-react";
@@ -54,13 +55,29 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 md:h-20 md:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-heading text-xl font-bold tracking-tight md:text-2xl"
+          className="flex items-center gap-3 font-heading text-xl font-bold tracking-tight md:text-2xl"
         >
-          <span
-            className="inline-block size-2.5 rotate-45 bg-accent shrink-0"
-            aria-hidden="true"
-          />
-          <span>{siteConfig.name}</span>
+          <div className="relative size-11 md:size-12 shrink-0 overflow-hidden rounded-xl border border-accent/60 bg-white/95 p-0.5 shadow-xs">
+            <Image
+              src={siteConfig.logo}
+              alt={`${siteConfig.name} logo`}
+              fill
+              sizes="48px"
+              className="object-contain"
+              priority
+            />
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="font-heading font-bold">{siteConfig.name}</span>
+            <span
+              className={cn(
+                "text-[10px] font-sans font-medium uppercase tracking-[0.25em]",
+                transparent ? "text-[#FCE8B8]" : "text-gold-text"
+              )}
+            >
+              {siteConfig.address.locality}
+            </span>
+          </div>
         </Link>
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-7 lg:flex">
@@ -142,12 +159,25 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="flex w-[86vw] max-w-sm flex-col bg-background p-6">
               <SheetHeader className="border-b border-border pb-4 text-left">
-                <SheetTitle className="font-heading text-2xl font-bold text-primary">
-                  {siteConfig.name}
-                </SheetTitle>
-                <SheetDescription className="text-xs uppercase tracking-[0.2em] text-gold-text">
-                  {siteConfig.address.locality}
-                </SheetDescription>
+                <div className="flex items-center gap-3">
+                  <div className="relative size-14 shrink-0 overflow-hidden rounded-2xl border border-accent/60 bg-white/95 p-1 shadow-xs">
+                    <Image
+                      src={siteConfig.logo}
+                      alt={`${siteConfig.name} logo`}
+                      fill
+                      sizes="56px"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <SheetTitle className="font-heading text-xl font-bold text-primary">
+                      {siteConfig.name}
+                    </SheetTitle>
+                    <SheetDescription className="text-xs uppercase tracking-[0.2em] text-gold-text font-medium">
+                      {siteConfig.address.locality} · Stay Royal
+                    </SheetDescription>
+                  </div>
+                </div>
               </SheetHeader>
 
               <nav aria-label="Mobile navigation" className="mt-6 flex flex-1 flex-col gap-1">

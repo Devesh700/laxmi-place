@@ -73,6 +73,7 @@ export interface SiteConfig {
   name: string;
   shortName: string;
   tagline: string;
+  logo: string;
   description: string;
   url: string;
   currency: "INR";

@@ -42,6 +42,7 @@ export async function middleware(request: NextRequest) {
 
   const secret = process.env.ADMIN_DEV_TOKEN;
   if (!secret || secret.length < 12) {
+    console.log("Redirecting to not found", secret);
     return new NextResponse("Not Found", { status: 404 });
   }
 

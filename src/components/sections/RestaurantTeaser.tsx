@@ -26,7 +26,7 @@ export function RestaurantTeaser() {
               {restaurant.cuisines.map((cuisine) => (
                 <Badge
                   key={cuisine}
-                  className="border border-[#D8B982]/40 bg-white/10 px-3 py-1 text-xs font-medium text-[#F5E6C8]"
+                  className="border border-[#E5B25D]/40 bg-white/10 px-3 py-1 text-xs font-medium text-[#F5E6C8]"
                 >
                   {cuisine}
                 </Badge>
@@ -92,7 +92,7 @@ export function RestaurantTeaser() {
 
         {/* Signature Dishes Row */}
         <div className="space-y-4 border-t border-white/15 pt-8">
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#D8B982]">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#E5B25D]">
             Signature Highlights
           </p>
           <div className="grid gap-4 sm:grid-cols-3">
@@ -103,7 +103,7 @@ export function RestaurantTeaser() {
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[11px] uppercase tracking-[0.14em] text-[#D8B982]">
+                    <span className="text-[11px] uppercase tracking-[0.14em] text-[#E5B25D]">
                       {dish.category}
                     </span>
                     <span

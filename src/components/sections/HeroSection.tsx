@@ -19,16 +19,16 @@ export function HeroSection() {
         className="object-cover object-center"
       />
 
-      {/* Rich forest-to-espresso gradient scrim for AA contrast */}
+      {/* Rich royal terracotta-to-espresso gradient scrim for AA contrast */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-[#16281F]/92 via-[#1F3D2F]/55 to-black/40"
+        className="absolute inset-0 bg-gradient-to-t from-[#260B03]/95 via-[#571B06]/75 to-black/45"
         aria-hidden="true"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 md:px-8 space-y-8">
         <div className="max-w-2xl space-y-4 text-white">
-          <p className="inline-flex items-center gap-2 rounded-full border border-[#D8B982]/45 bg-[#1F3D2F]/70 px-3.5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-[#E6C992] backdrop-blur-sm">
-            Boutique Stay · {siteConfig.address.locality}
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#D49A38]/50 bg-[#7E2905]/80 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-[#FCE8B8] backdrop-blur-sm">
+            Royal Stay · {siteConfig.address.locality}
           </p>
           <h1 className="font-heading font-bold tracking-tight text-white drop-shadow-sm">
             {siteConfig.name}

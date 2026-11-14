@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -17,12 +18,28 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1200px] px-5 py-14 md:px-8 md:py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
-            <div className="flex items-center gap-2.5">
-              <span className="inline-block size-2.5 rotate-45 bg-accent" aria-hidden="true" />
-              <p className="font-heading text-2xl font-bold tracking-tight">{siteConfig.name}</p>
+            <div className="flex items-center gap-3">
+              <div className="relative size-14 shrink-0 overflow-hidden rounded-2xl border border-accent/60 bg-white/95 p-1 shadow-md">
+                <Image
+                  src={siteConfig.logo}
+                  alt={`${siteConfig.name} logo`}
+                  fill
+                  sizes="56px"
+                  className="object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-heading text-xl font-bold tracking-tight">{siteConfig.name}</p>
+                <p className="text-[10px] font-sans font-medium uppercase tracking-[0.25em] text-[#E5B25D]">
+                  {siteConfig.address.locality}
+                </p>
+              </div>
             </div>
+            <p className="font-serif italic text-base text-[#FCE8B8]">
+              &ldquo;{siteConfig.tagline}&rdquo;
+            </p>
             <p className="text-sm leading-relaxed text-primary-foreground/80">
-              {siteConfig.tagline}
+              {siteConfig.description}
             </p>
             <div className="flex items-center gap-3 pt-1">
               {siteConfig.social.instagram && (
@@ -51,7 +68,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-3">
-            <h2 className="font-heading text-lg font-semibold text-[#E2C28B]">Explore</h2>
+            <h2 className="font-heading text-lg font-semibold text-[#E5B25D]">Explore</h2>
             <ul className="space-y-2 text-sm text-primary-foreground/85">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -67,7 +84,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-3">
-            <h2 className="font-heading text-lg font-semibold text-[#E2C28B]">Contact</h2>
+            <h2 className="font-heading text-lg font-semibold text-[#E5B25D]">Contact</h2>
             <ul className="space-y-2.5 text-sm text-primary-foreground/85">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
@@ -92,7 +109,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-3">
-            <h2 className="font-heading text-lg font-semibold text-[#E2C28B]">Timings &amp; Policies</h2>
+            <h2 className="font-heading text-lg font-semibold text-[#E5B25D]">Timings &amp; Policies</h2>
             <ul className="space-y-2 text-sm text-primary-foreground/85">
               <li className="flex items-center gap-2.5">
                 <Clock className="size-4 shrink-0 text-accent" />

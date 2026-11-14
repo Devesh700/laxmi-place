@@ -31,11 +31,11 @@ export function PageBanner({
         className="object-cover object-center"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-[#16281F]/80 via-[#1F3D2F]/80 to-[#16281F]/90"
+        className="absolute inset-0 bg-gradient-to-b from-[#240B03]/85 via-[#5C1C07]/80 to-[#240B03]/90"
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-[1200px] space-y-3 px-5 md:px-8">
-        <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-[#E6C992]">
+        <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-[#E5B25D]">
           {breadcrumbs.map((step, idx) => (
             <span key={step.name} className="inline-flex items-center gap-1.5">
               {idx > 0 && <ChevronRight className="size-3.5 text-white/60" />}

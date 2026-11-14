@@ -30,7 +30,7 @@ export function MapFacade() {
             sizes="(max-width: 768px) 100vw, 560px"
             className="object-cover brightness-75"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#1F3D2F]/60 p-6 text-center text-white backdrop-blur-[2px]">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[#380E02]/65 p-6 text-center text-white backdrop-blur-[2px]">
             <div className="flex size-12 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-md">
               <MapPin className="size-6" />
             </div>

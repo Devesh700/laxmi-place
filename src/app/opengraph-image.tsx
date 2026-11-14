@@ -19,9 +19,9 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "64px",
-          backgroundColor: "#faf7f2",
-          color: "#1f1a17",
-          border: "16px solid #8b5a2b",
+          backgroundColor: "#fdfaf5",
+          color: "#261108",
+          border: "16px solid #c88a28",
         }}
       >
         <div
@@ -29,17 +29,17 @@ export default function OpenGraphImage() {
             fontSize: 24,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#8b5a2b",
+            color: "#943209",
             fontWeight: 600,
           }}
         >
-          Hotel &amp; In-House Restaurant
+          Royal Hotel &amp; In-House Dining · Ayodhya
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-          <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.1 }}>{siteConfig.name}</div>
-          <div style={{ fontSize: 32, color: "#574c43" }}>{siteConfig.tagline}</div>
+          <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.1, color: "#943209" }}>{siteConfig.name}</div>
+          <div style={{ fontSize: 32, color: "#8e5405" }}>{siteConfig.tagline}</div>
         </div>
-        <div style={{ fontSize: 24, color: "#574c43" }}>
+        <div style={{ fontSize: 24, color: "#6b5344" }}>
           {`${siteConfig.address.locality}, ${siteConfig.address.region}`}
         </div>
       </div>

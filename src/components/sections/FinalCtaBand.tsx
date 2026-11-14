@@ -16,11 +16,11 @@ export function FinalCtaBand() {
         className="object-cover"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-[#1F3D2F]/92 via-[#1F3D2F]/82 to-[#16281F]/88"
+        className="absolute inset-0 bg-gradient-to-r from-[#4A1404]/94 via-[#782407]/88 to-[#380E02]/92"
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-[900px] space-y-6 px-5 text-center md:px-8">
-        <p className="text-xs font-medium uppercase tracking-[0.22em] text-[#E6C992]">
+        <p className="text-xs font-medium uppercase tracking-[0.22em] text-[#E5B25D]">
           Direct Reservations
         </p>
         <h2 className="font-heading font-bold text-white">

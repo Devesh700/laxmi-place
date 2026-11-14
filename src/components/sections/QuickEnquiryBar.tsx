@@ -31,7 +31,7 @@ export function QuickEnquiryBar() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-4xl rounded-2xl border border-white/30 bg-background/95 p-4 shadow-[0_18px_50px_rgba(31,61,47,0.22)] backdrop-blur-md md:p-5">
+    <div className="mx-auto w-full max-w-4xl rounded-2xl border border-white/30 bg-background/95 p-4 shadow-[0_18px_50px_rgba(38,11,3,0.25)] backdrop-blur-md md:p-5">
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_0.85fr_auto] lg:items-end">
         <div className="space-y-1.5 text-left">
           <span className="block text-[11px] font-medium uppercase tracking-[0.16em] text-gold-text">

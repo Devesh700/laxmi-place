@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -15,6 +16,7 @@ import {
 import { logoutAdminAction } from "@/app/admin/actions";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const adminNav = [
@@ -35,11 +37,24 @@ export function AdminShell({ children }: { children: ReactNode }) {
   const NavContent = ({ onNavigate }: { onNavigate?: () => void }) => (
     <div className="flex h-full flex-col justify-between p-4">
       <div className="space-y-6">
-        <div className="border-b border-border pb-4">
-          <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold-text">
-            Room Master
-          </p>
-          <p className="font-heading text-xl font-bold text-primary">Laxmi Chandra Palace</p>
+        <div className="flex items-center gap-3 border-b border-border pb-4">
+          <div className="relative size-12 shrink-0 overflow-hidden rounded-xl border border-accent/60 bg-white p-0.5 shadow-xs">
+            <Image
+              src={siteConfig.logo}
+              alt={siteConfig.name}
+              fill
+              sizes="48px"
+              className="object-contain"
+            />
+          </div>
+          <div>
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold-text">
+              Room Master
+            </p>
+            <p className="font-heading text-lg font-bold text-primary leading-tight">
+              {siteConfig.name}
+            </p>
+          </div>
         </div>
 
         <nav aria-label="Admin navigation" className="space-y-1">
@@ -96,11 +111,24 @@ export function AdminShell({ children }: { children: ReactNode }) {
       <div className="flex min-w-0 flex-col">
         {/* Mobile admin header */}
         <header className="flex h-16 items-center justify-between border-b border-border bg-card px-4 lg:hidden">
-          <div>
-            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gold-text">
-              Room Master
-            </p>
-            <p className="font-heading text-lg font-bold text-primary">Admin</p>
+          <div className="flex items-center gap-2.5">
+            <div className="relative size-9 shrink-0 overflow-hidden rounded-lg border border-accent/60 bg-white p-0.5">
+              <Image
+                src={siteConfig.logo}
+                alt={siteConfig.name}
+                fill
+                sizes="36px"
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <p className="text-[9px] font-medium uppercase tracking-[0.2em] text-gold-text">
+                Room Master
+              </p>
+              <p className="font-heading text-base font-bold text-primary leading-none">
+                {siteConfig.name}
+              </p>
+            </div>
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger render={<Button variant="outline" size="icon" aria-label="Open admin menu" />}>

@@ -23,7 +23,7 @@ const dmSans = localFont({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#1F3D2F",
+  themeColor: "#943209",
   width: "device-width",
   initialScale: 1,
 };

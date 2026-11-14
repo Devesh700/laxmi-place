@@ -1,12 +1,14 @@
 "use client";
 
 import { useActionState } from "react";
-import { KeyRound, Lock } from "lucide-react";
+import Image from "next/image";
+import { KeyRound } from "lucide-react";
 import { loginAdminAction } from "@/app/admin/actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { siteConfig } from "@/config/site";
 
 export default function AdminLoginPage() {
   const [state, formAction, pending] = useActionState(loginAdminAction, null);
@@ -15,11 +17,18 @@ export default function AdminLoginPage() {
     <div className="flex min-h-screen items-center justify-center px-5 py-12">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2 text-center">
-          <div className="mx-auto flex size-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-            <Lock className="size-5" />
+          <div className="mx-auto relative size-16 overflow-hidden rounded-2xl border border-accent/60 bg-white p-1 shadow-sm">
+            <Image
+              src={siteConfig.logo}
+              alt={siteConfig.name}
+              fill
+              sizes="64px"
+              className="object-contain"
+              priority
+            />
           </div>
           <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold-text">
-            Room Master
+            Room Master · {siteConfig.address.locality}
           </p>
           <CardTitle className="font-heading text-3xl">Admin Access</CardTitle>
           <CardDescription>
